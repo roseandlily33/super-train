@@ -1,12 +1,9 @@
 import { useState } from 'react';
-import DishTypes from './DishTypes';
-import Appetizers from '../dishPages/Appetizers';
-import Pasta from '../dishPages/Pasta';
-import Entrees from '../dishPages/Entrees';
-import Pizza from '../dishPages/Pizza';
-import Desserts from '../dishPages/Desserts';
-import Drinks from '../dishPages/Drinks';
-
+import DishTypes from './dishTypes.router';
+import Appetizers from '../../components/dishPages/Appetizers';
+import Pasta from '../../components/dishPages/Pasta';
+import Entrees from '../../components/dishPages/Entrees';
+import Desserts from '../../components/dishPages/Desserts';
 
 export default function Dishes() {
 
@@ -16,26 +13,14 @@ export default function Dishes() {
 
         if (currentType === 'Appetizers') {
             return <Appetizers />;
-
         }
         if (currentType === 'Entrees') {
             return <Entrees />;
-
         }
         if (currentType === 'Desserts') {
             return <Desserts />;
-
         }
-        if (currentType === 'Pasta') {
             return <Pasta />;
-
-        }
-        if (currentType === 'Pizza') {
-            return <Pizza />;
-
-        }
-        return <Drinks />;
-
     };
 
     const handleTypeChange = (type) => setCurrentPage(type);

@@ -1,8 +1,8 @@
 import { useQuery } from '@apollo/client';
 import { Modal } from 'antd';
 import { useState } from 'react';
-//import Auth from '../utils/auth';
-import { GET_SINGLE_REVIEW } from '../utils/queries';
+//import Auth from '../../utils/auth';
+import { GET_SINGLE_REVIEW } from '../../utils/queries';
 
 const EditReview = ({reviewId}) => {
     console.log(reviewId);

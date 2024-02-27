@@ -1,6 +1,6 @@
-import img8 from '../images/food/img8.jpg';
-import Dishes from '../components/Dishes';
-import {StyledMenuContainer, StyledDishesContainer } from '../styled/Menu.styled';
+import img8 from '../../images/food/img8.jpg';
+import Dishes from './dishes.router';
+import {StyledMenuContainer, StyledDishesContainer } from './menu.styles';
 
 const MenuPage = () => {
 

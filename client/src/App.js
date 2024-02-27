@@ -3,22 +3,22 @@ import {ApolloClient, InMemoryCache, ApolloProvider, createHttpLink} from '@apol
 import {setContext} from '@apollo/client/link/context';
 
 //Importing the Pages and Components:
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import ContactPage from './pages/Contact';
-import CustomerPage from './pages/Customer';
-import LocationPage from './pages/Location';
-import LoginPage from './pages/Login';
-import MenuPage from './pages/Menu';
-import NotFound from './pages/NotFound';
-import Footer from './components/Footer';
-import Reviews from './pages/Reviews';
-import DonationPage from './pages/Donations';
-import CustomerReservations from './components/CustomerReservation';
+import Navbar from './routes/navigation/navbar.component';
+import Home from './routes/home/home.component';
+import ContactPage from './routes/contact&location/contact.component';
+import CustomerPage from './routes/user/user.component';
+import LocationPage from './routes/contact&location/location.component';
+import LoginPage from './routes/authentication/login.component';
+import MenuPage from './routes/menu/menu.component';
+import NotFound from './routes/notFound/notFound.component';
+import Footer from './routes/footer/footer.component';
+import Reviews from './routes/reviews/reviews.component';
+import CustomerReservations from './routes/reservations/customerRes.component';
 
 //For the styled components pluging;
 import { ThemeProvider } from 'styled-components';
-import ReservationPage from './pages/Reservation';
+import ReservationPage from './routes/reservations/reservation.component';
+
 const theme = {
   colors: {
     orange: '#F19A38',
@@ -65,7 +65,7 @@ function App() {
       <Route path='/login' element={<LoginPage />}></Route>
       <Route path='/reviews' element={<Reviews />}></Route>
       <Route path='/menu' element={<MenuPage />}></Route>
-      <Route path='/donation' element={<DonationPage />}></Route>
+      {/* <Route path='/donation' element={<DonationPage />}></Route> */}
       <Route path='/customerReservations' element={<CustomerReservations />}></Route>
       <Route path='*' element={<NotFound/>}></Route>
      </Routes>

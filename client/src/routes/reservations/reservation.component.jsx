@@ -2,12 +2,12 @@ import {
     StyledReservationContainer,
     StyledReservationParent,
     StyledReservationForm,
-  } from "../styled/Reservation.styled";
-  import myImg from "../images/food/notUsed.jpg";
+  } from './reservation.styles';
+  import myImg from '../../images/food/notUsed.jpg';
   import { useState } from "react";
   import { useMutation } from "@apollo/client";
-  import { ADD_RESERVATION } from "../utils/mutations";
-  import Auth from '../utils/auth';
+  import { ADD_RESERVATION } from '../../utils/mutations';
+  import Auth from '../../utils/auth';
   
   const ReservationPage = () => {
     console.log('On the res page');

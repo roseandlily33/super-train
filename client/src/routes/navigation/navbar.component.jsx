@@ -1,6 +1,6 @@
-import { StyledNavbar, LeftNavbar, RightNavbar, ExtendedNavbar, InnerNavbar, NavbarLink, NavbarSingleLink, OpenLinksButton, NavbarExtendedLink, NavbarSingleLinkHome } from "../styled/Navbar.styled";
+import { StyledNavbar, LeftNavbar, RightNavbar, ExtendedNavbar, InnerNavbar, NavbarLink, NavbarSingleLink, OpenLinksButton, NavbarExtendedLink, NavbarSingleLinkHome } from './navbar.styles';
 import { useState } from "react";
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);

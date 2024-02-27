@@ -1,4 +1,4 @@
-import { StyledNotFound, StyledNotFoundLink } from "../styled/NotFound.styled";
+import { StyledNotFound, StyledNotFoundLink } from './notFound.styles';
 
 const NotFound = () => {
 

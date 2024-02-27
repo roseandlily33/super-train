@@ -1,5 +1,5 @@
-import { StyledLocationAndHoursContainer,  } from '../styled/Location.styled';
-import Map from '../components/Map';
+import { StyledLocationAndHoursContainer,  } from './location.styles';
+// import Map from '../components/Map';
 
 const LocationPage = () => {
     
@@ -39,7 +39,7 @@ const LocationPage = () => {
         <div className='locationSection'>
 
         <h5>100 Tucker Park Rd, Saint John, NB E2K 5E2</h5>
-        <Map />
+        {/* <Map /> */}
         </div>
     </StyledLocationAndHoursContainer>
     );

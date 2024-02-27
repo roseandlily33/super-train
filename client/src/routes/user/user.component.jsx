@@ -1,10 +1,10 @@
 import { useQuery, useMutation } from "@apollo/client";
-import { GET_USER} from "../utils/queries";
-import {DELETE_REVIEW} from "../utils/mutations";
-import { OverflowMapped, StyledCustomer, StyledCustomerRight, CustomerMappedReviews, CustomerReview } from "../styled/Customer.styled";
-import img4 from '../images/food/img4.jpg';
-import Auth from "../utils/auth";
-import CustomerReviewSection from "../components/CustomerReview";
+import { GET_USER} from "../../utils/queries";
+import {DELETE_REVIEW} from "../../utils/mutations";
+import { OverflowMapped, StyledCustomer, StyledCustomerRight, CustomerMappedReviews, CustomerReview } from './user.styles';
+import img4 from '../../images/food/img4.jpg';
+import Auth from "../../utils/auth";
+import CustomerReviewSection from '../reviews/customerReview.component';
 //import EditReview from "../components/EditReview";
 import { Link } from "react-router-dom";
 

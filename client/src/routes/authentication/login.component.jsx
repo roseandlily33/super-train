@@ -1,6 +1,6 @@
-import LoginForm from "../components/LoginForm";
-import SignupForm from "../components/SignupForm";
-import img3 from '../images/food/img3.jpg';
+import LoginForm from './loginForm.component';
+import SignupForm from './signupForm.component';
+import img3 from '../../images/food/img3.jpg';
 
 const LoginPage = () => {
 

@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
-import { GET_RESERVATIONS } from "../utils/queries";
-import Auth from '../utils/auth';
-import { CustomerResDiv, CustomResEach } from "../styled/CustomerReservations.styled";
+import { GET_RESERVATIONS } from "../../utils/queries";
+import Auth from '../../utils/auth';
+import { CustomerResDiv, CustomResEach } from './customerRes.styles';
 
 
 const CustomerReservations = () => {

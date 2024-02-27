@@ -4,7 +4,7 @@ import {
   StyledContactContainer,
   StyledContactBottom,
   StyledContactForm,
-} from "../styled/Contact.styled";
+} from './contact.styles';
 
 const ContactPage = () => {
   return (

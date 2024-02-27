@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledMenuButtonContainer} from '../styled/Menu.styled';
+import { StyledMenuButtonContainer} from './menu.styles';
 
 function DishTypes({ currentType, handleTypeChange }) {
     return (
@@ -9,7 +9,6 @@ function DishTypes({ currentType, handleTypeChange }) {
             >
                 Appetizers
             </button>
-            
             <button className="button"
                 onClick={() => handleTypeChange('Entrees')}
             >Entrees</button>
@@ -19,13 +18,6 @@ function DishTypes({ currentType, handleTypeChange }) {
             <button className="button"
                 onClick={() => handleTypeChange('Pasta')}
             >Pasta</button>
-            <button className="button"
-                onClick={() => handleTypeChange('Pizza')}
-            >Pizza</button>
-
-            <button className="button"
-                onClick={() => handleTypeChange('Drinks')}
-            >Drinks</button>
 
         </StyledMenuButtonContainer>
 

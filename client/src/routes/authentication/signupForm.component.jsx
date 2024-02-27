@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {useMutation} from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
-import { StyledLogin } from "../styled/Login.styled";
+import { ADD_USER } from '../../utils/mutations';
+import Auth from '../../utils/auth';
+import { StyledLogin } from './login.styles';
 
 const SignupForm = () => {
     const [formState, setFormState] = useState({

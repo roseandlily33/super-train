@@ -1,10 +1,10 @@
 import { Carousel } from 'antd';
-import img1 from '../images/interior/img1.jpg';
-import img2 from '../images/interior/img2.jpg';
-import img7 from '../images/food/img7.jpg';
-import img5 from '../images/food/img5.jpg';
-import img6 from '../images/food/img6.jpg';
-import { BorderDiv, HomeDiv, HomeDivName, HomeName } from '../styled/Home.styled';
+import img1 from '../../images/interior/img1.jpg';
+import img2 from '../../images/interior/img2.jpg';
+import img7 from '../../images/food/img7.jpg';
+import img5 from '../../images/food/img5.jpg';
+import img6 from '../../images/food/img6.jpg';
+import { BorderDiv, HomeDiv, HomeDivName, HomeName } from './home.styles';
 
 const HomePage = () => {
     return (
