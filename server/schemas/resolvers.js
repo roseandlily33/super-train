@@ -1,7 +1,7 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Review, Reservation } = require("../models");
 const { signToken } = require("../utils/auth");
-const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
+// const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
 const resolvers = {
   Query: {
@@ -33,8 +33,8 @@ const resolvers = {
       console.log("RESERVATIONS", reservation);
       return reservation;
     },
-    checkout: async (parent, args, context) => {
-      const url = new URL(context.headers.referer).origin;
+    // checkout: async (parent, args, context) => {
+    //   const url = new URL(context.headers.referer).origin;
 
       // add this new Donation to the database using Donation model
 
@@ -62,41 +62,43 @@ const resolvers = {
       //   });
       // }
 
-      // dummy data
-      const product = await stripe.products.create({
-        name: "Donation",
-        description: "Description of donation!",
-        // images: [`${url}/images/${products[i].image}`]
-      });
+      // // dummy data
+      // const product = await stripe.products.create({
+      //   name: "Donation",
+      //   description: "Description of donation!",
+      //   // images: [`${url}/images/${products[i].image}`]
+      // });
 
-      const price = await stripe.prices.create({
-        product: 123,
-        unit_amount: args.amount * 100,
-        currency: "usd",
-      });
+      // const price = await stripe.prices.create({
+      //   product: 123,
+      //   unit_amount: args.amount * 100,
+      //   currency: "usd",
+      // });
 
-      const line_items = [
-        {
-          price: price.id,
-          quantity: 1,
-        },
-      ];
+      // const line_items = [
+      //   {
+      //     price: price.id,
+      //     quantity: 1,
+      //   },
+      // ];
 
-      const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
-        line_items,
-        mode: "payment",
-        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${url}/`,
-      });
+    //   const session = await stripe.checkout.sessions.create({
+    //     payment_method_types: ["card"],
+    //     line_items,
+    //     mode: "payment",
+    //     success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+    //     cancel_url: `${url}/`,
+    //   });
 
-      return { session: session.id };
-    },
+    //   return { session: session.id };
+    // },
   },
 
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
+      console.log('CREATNIG A USER')
       const user = await User.create({ username, email, password });
+      console.log('ADDING USER', user);
       const token = signToken(user);
       return { token, user };
     },
